@@ -36,7 +36,6 @@ router.get('/posts', (ctx) => {
     }
     const filteredPosts = posts.filter((post) => post.postId === postId);
     ctx.body = filteredPosts;
-    ctx.status = filteredPosts.length > 0 ? 200 : 404;
     return;
   }
   ctx.body = posts;
